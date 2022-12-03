@@ -33,6 +33,23 @@ int IsEmpty(StaticSeqList *list);
 int GetSizeOfList(StaticSeqList *list);
 
 /**
+ * Get the element at the specified position from the sequence list
+ * @param list
+ * @param pos
+ * @param e
+ */
+void GetElemByPos(StaticSeqList *list, int pos, ElemType *e);
+
+/**
+ * Find the position of a given element.
+ * Only take the first one, if values are the same.
+ * @param list
+ * @param key
+ * @return
+ */
+int LocateElem(StaticSeqList *list, ElemType key);
+
+/**
  * Insert element: Insert the given value at the specified position
  * @param list
  * @param elem: Element to be inserted

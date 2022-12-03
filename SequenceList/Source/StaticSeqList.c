@@ -47,6 +47,49 @@ int GetSizeOfList(StaticSeqList *list)
 
 
 /**
+ * Get the element at the specified position from the sequence list
+ * @param list
+ * @param pos
+ * @param e
+ */
+void GetElemByPos(StaticSeqList *list, int pos, ElemType *e)
+{
+    if (list->length == 0)
+    {
+        printf("The list is empty.\n");
+    }
+
+    if (pos < 1 || pos > list->length)
+    {
+        printf("Wrong position.\n");
+    }
+
+    *e = list->data[pos - 1];
+}
+
+
+/**
+ * Find the position of a given element.
+ * Only take the first one, if values are the same.
+ * @param list
+ * @param key
+ * @return
+ */
+int LocateElem(StaticSeqList *list, ElemType key)
+{
+    for (int i = 0; i < list->length; i++)
+    {
+        if (list->data[i] == key)
+        {
+            return i + 1;
+        }
+    }
+
+    return -1;
+}
+
+
+/**
  * Insert element: Insert the given value at the specified position
  * @param list
  * @param elem: Element to be inserted
