@@ -62,9 +62,41 @@ void InsetElemAtAny(SinglyLinkedList *pHead, ElemType elem, int pos)
         p = p->next;
     }
 
+
     node->next = p->next;
     p->next = node;
+}
 
+
+/**
+ * Delete a element to the singly linked list at any valid position
+ * @param pHead
+ * @param pos
+ */
+void DelElemAtAny(SinglyLinkedList *pHead, int pos)
+{
+
+    int length = GetSizeOfList(pHead);
+    if (pos < 1 || pos > length)
+    {
+        printf("Wrong position.\n");
+        return;
+    }
+
+    // The pointer p point to the head node
+    struct Node *p = pHead;
+
+    int i = 1;
+    while (p != NULL && i <= pos - 1)
+    {
+        p = p->next;
+        i++;
+    }
+
+    struct Node *node = p->next;
+    p->next = p->next->next;
+
+    free(node);
 }
 
 
@@ -117,6 +149,27 @@ void InsertElemToHead(SinglyLinkedList *pHead, ElemType elem)
     node->data = elem;
     node->next = p->next;
     p->next = node;
+}
+
+
+/**
+ * Delete a element at the head of the singly linked list
+ * @param pHead
+ */
+void DelElemFromEnd(SinglyLinkedList *pHead)
+{
+    // The pointer p point to the head node
+    struct Node *p = pHead;
+
+    while (p->next->next != NULL)
+    {
+        p=p->next;
+    }
+
+    struct Node *node = p->next;
+    free(node);
+
+    p->next = NULL;
 }
 
 

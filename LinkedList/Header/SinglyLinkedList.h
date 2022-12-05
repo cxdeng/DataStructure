@@ -35,6 +35,12 @@ int IsEmpty(SinglyLinkedList *pHead);
  */
 void InsetElemAtAny(SinglyLinkedList *pHead, ElemType elem, int pos);
 
+/**
+ * Delete a element to the singly linked list at any valid position
+ * @param pHead
+ * @param pos
+ */
+void DelElemAtAny(SinglyLinkedList *pHead, int pos);
 
 /**
  * Insert a element at the end of the singly linked list
@@ -49,6 +55,12 @@ void InsertElemToEnd(SinglyLinkedList *pHead, ElemType elem);
  * @param elem
  */
 void InsertElemToHead(SinglyLinkedList *pHead, ElemType elem);
+
+/**
+ * Delete a element at the head of the singly linked list
+ * @param pHead
+ */
+void DelElemFromEnd(SinglyLinkedList *pHead);
 
 /**
  * Return the size of the singly linked list
