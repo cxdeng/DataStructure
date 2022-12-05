@@ -163,7 +163,7 @@ void DelElemFromEnd(SinglyLinkedList *pHead)
 
     while (p->next->next != NULL)
     {
-        p=p->next;
+        p = p->next;
     }
 
     struct Node *node = p->next;
@@ -223,4 +223,36 @@ void TraverseLinkedList(SinglyLinkedList *pHead)
         p = p->next;
     }
     printf("\n");
+}
+
+
+/**
+ * Reverse singly linked list using iteration
+ * @param pHead
+ */
+void ReverseLinkedList(SinglyLinkedList *pHead)
+{
+
+    struct Node *current = NULL;
+    struct Node *prev = NULL;
+    struct Node *next = NULL;
+
+    // The pointer 'current' point to the first element node
+    current = pHead->next;
+
+    while (current != NULL)
+    {
+        // Save the address of the next node
+        next = current->next;
+        // Reverse the link
+        current->next = prev;
+        // Save the address of the current node as the address of the previous node
+        prev = current;
+        // Move to the next the node
+        current = next;
+    }
+
+    // End of the while loop, The pointer 'prev' store the address of the last node. And the pointer 'pHead' will store the address of the last node
+    pHead->next = prev;
+
 }

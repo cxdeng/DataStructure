@@ -82,3 +82,9 @@ SinglyLinkedList *LocateElem(SinglyLinkedList *pHead, ElemType elem);
  * @param pHead
  */
 void TraverseLinkedList(SinglyLinkedList *pHead);
+
+/**
+ * Reverse singly linked list using iteration
+ * @param pHead
+ */
+void ReverseLinkedList(SinglyLinkedList *pHead);
