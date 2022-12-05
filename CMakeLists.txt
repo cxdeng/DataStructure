@@ -8,3 +8,4 @@ include_directories(LinkedList/Header SequenceList/Header)
 
 add_executable(SinglyLinkedList LinkedList/Main/SinglyLinkedListMain.c LinkedList/Source/SinglyLinkedList.c)
 add_executable(StaticSeqList SequenceList/Main/StaticSeqListMain.c SequenceList/Source/StaticSeqList.c)
+add_executable(CircularSinglyLinkedList LinkedList/Main/CircularSinglyLinkedListMain.c LinkedList/Source/CircularSinglyLinkedList.c)

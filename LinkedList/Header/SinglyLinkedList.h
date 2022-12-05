@@ -57,7 +57,7 @@ void InsertElemToEnd(SinglyLinkedList *pHead, ElemType elem);
 void InsertElemToHead(SinglyLinkedList *pHead, ElemType elem);
 
 /**
- * Delete a element at the head of the singly linked list
+ * Delete a element at the end of the singly linked list
  * @param pHead
  */
 void DelElemFromEnd(SinglyLinkedList *pHead);
