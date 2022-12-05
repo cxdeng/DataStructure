@@ -30,6 +30,45 @@ int IsEmpty(SinglyLinkedList *pHead)
 
 
 /**
+ * Insert a element to the singly linked list at any valid position
+ * @param pHead
+ * @param elem
+ * @param pos
+ */
+void InsetElemAtAny(SinglyLinkedList *pHead, ElemType elem, int pos)
+{
+
+    int length = GetSizeOfList(pHead);
+    if (pos < 1 || pos > length + 1)
+    {
+        printf("Wrong position.\n");
+        return;
+    }
+
+    // The pointer p point to the head node
+    struct Node *p = pHead;
+
+    struct Node *node = (struct Node *) malloc(sizeof(struct Node));
+    if (!node)
+    {
+        printf("Memory allocation failed.\n");
+        return;
+    }
+    node->data = elem;
+    node->next = NULL;
+
+    for (int i = 1; i <= pos - 1; i++)
+    {
+        p = p->next;
+    }
+
+    node->next = p->next;
+    p->next = node;
+
+}
+
+
+/**
  * Insert a element at the end of the singly linked list
  * @param pHead
  * @param elem

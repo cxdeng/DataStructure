@@ -6,7 +6,7 @@
 typedef int ElemType;
 
 /**
-* Define node of singly list
+* Define node of singly linked list
 */
 typedef struct Node
 {
@@ -26,6 +26,14 @@ SinglyLinkedList *InitSinglyLinkedList(void);
  * @return If return 1: The pHead is not empty. If return 0: The pHead is empty
  */
 int IsEmpty(SinglyLinkedList *pHead);
+
+/**
+ * Insert a element to the singly linked list at any valid position
+ * @param pHead
+ * @param elem
+ * @param pos
+ */
+void InsetElemAtAny(SinglyLinkedList *pHead, ElemType elem, int pos);
 
 
 /**
