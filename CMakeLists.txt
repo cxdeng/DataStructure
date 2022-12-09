@@ -13,3 +13,4 @@ add_executable(CircularSinglyLinkedList LinkedList/Main/CircularSinglyLinkedList
 add_executable(DoublyLinkedList LinkedList/Main/DoublyLinkedListMain.c LinkedList/Source/DoublyLinkedList.c)
 
 add_executable(StaticStack Stack/Main/StaticStackMain.c Stack/Source/StaticStack.c)
+add_executable(LinkedStack Stack/Main/LinkedStackMain.c Stack/Source/LinkedStack.c)
