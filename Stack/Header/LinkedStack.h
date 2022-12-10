@@ -3,7 +3,7 @@
 
 #define  TRUE 1
 #define  FALSE 0
-typedef int ElemType;
+typedef char ElemType;
 
 /**
 * Define node of linked stack
@@ -41,6 +41,13 @@ void Pop(LinkedStack *linkedStack, ElemType *elem);
  * @return
  */
 ElemType Top(LinkedStack *linkedStack);
+
+/**
+ * Reverse a string
+ * @param ch
+ * @param length
+ */
+void ReverseString(char *arr, unsigned int length);
 
 /**
  * Traverse the static stack

@@ -87,7 +87,13 @@ void TraverseLinkedList(SinglyLinkedList *pHead);
  * Reverse singly linked list using iteration
  * @param pHead
  */
-void ReverseLinkedList(SinglyLinkedList *pHead);
+void ReverseLinkedListUsingIteration(SinglyLinkedList *pHead);
+
+/**
+ * Reverse singly linked list using recursion
+ * @param pHead
+ */
+void ReverseLinkedListUsingRecursion(SinglyLinkedList *pHead);
 
 /**
  * Print singly linked list using recursion

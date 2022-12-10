@@ -6,7 +6,7 @@
 #define  FALSE 0
 typedef int ElemType;
 
-typedef struct Node
+typedef struct
 {
     ElemType data[MAXSIZE];
     int length;

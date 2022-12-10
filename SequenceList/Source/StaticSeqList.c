@@ -8,7 +8,7 @@ StaticSeqList *InitStaticSeqList(void)
 {
 
     StaticSeqList *list = NULL;
-    list = (struct Node *) malloc(sizeof(struct Node));
+    list = (struct StaticSeqList *) malloc(sizeof(StaticSeqList));
 
     if (list)
     {

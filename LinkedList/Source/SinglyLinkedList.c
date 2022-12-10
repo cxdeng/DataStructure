@@ -230,7 +230,7 @@ void TraverseLinkedList(SinglyLinkedList *pHead)
  * Reverse singly linked list using iteration
  * @param pHead
  */
-void ReverseLinkedList(SinglyLinkedList *pHead)
+void ReverseLinkedListUsingIteration(SinglyLinkedList *pHead)
 {
 
     struct Node *current = NULL;
@@ -258,11 +258,22 @@ void ReverseLinkedList(SinglyLinkedList *pHead)
 
 
 /**
+ * Reverse singly linked list using recursion
+ * @param pHead
+ */
+void ReverseLinkedListUsingRecursion(SinglyLinkedList *pHead)
+{
+    struct Node *p = pHead->next;
+}
+
+
+/**
  * Print singly linked in forward list using recursion
  * @param pHead
  */
 void PrintUsingRecursionForward(struct Node *p)
 {
+
     // Exit condition
     if (p == NULL)
     {

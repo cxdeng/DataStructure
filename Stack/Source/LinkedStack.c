@@ -80,7 +80,34 @@ ElemType Top(LinkedStack *linkedStack)
         return NULL;
     }
 
-    return p->next->data;
+    ElemType top = p->next->data;
+
+    return top;
+}
+
+
+/**
+ * Reverse a string
+ * @param ch
+ * @param length
+ */
+void ReverseString(char *arr, unsigned int length)
+{
+    LinkedStack stack;
+
+    // Loop for push
+    for (int i = 0; i < length; i++)
+    {
+        Push(&stack, arr[i]);
+    }
+
+    // Loop for pop
+    for (int i = 0; i < length; i++)
+    {
+        arr[i] = Top(&stack);
+        Pop(&stack, NULL);
+    }
+
 }
 
 
