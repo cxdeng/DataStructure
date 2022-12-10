@@ -3,7 +3,7 @@ project(DataStructure C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(LinkedList/Header SequenceList/Header Stack/Header)
+include_directories(LinkedList/Header SequenceList/Header Stack/Header Queue/Header)
 
 
 add_executable(SinglyLinkedList LinkedList/Main/SinglyLinkedListMain.c LinkedList/Source/SinglyLinkedList.c)
@@ -14,3 +14,5 @@ add_executable(DoublyLinkedList LinkedList/Main/DoublyLinkedListMain.c LinkedLis
 
 add_executable(StaticStack Stack/Main/StaticStackMain.c Stack/Source/StaticStack.c)
 add_executable(LinkedStack Stack/Main/LinkedStackMain.c Stack/Source/LinkedStack.c)
+
+add_executable(ArrayQueue Queue/Main/StaticSeqQueueMain.c Queue/Source/StaticSeqQueue.c)
