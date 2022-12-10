@@ -258,7 +258,7 @@ void ReverseLinkedList(SinglyLinkedList *pHead)
 
 
 /**
- * Print singly linked list using recursion
+ * Print singly linked in forward list using recursion
  * @param pHead
  */
 void PrintUsingRecursionForward(struct Node *p)
@@ -276,7 +276,7 @@ void PrintUsingRecursionForward(struct Node *p)
 
 
 /**
- * Print singly linked list using recursion
+ * Print singly linked list in backward using recursion
  * @param pHead
  */
 void PrintUsingRecursionBackward(struct Node *p)
