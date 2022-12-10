@@ -88,3 +88,15 @@ void TraverseLinkedList(SinglyLinkedList *pHead);
  * @param pHead
  */
 void ReverseLinkedList(SinglyLinkedList *pHead);
+
+/**
+ * Print singly linked list using recursion
+ * @param pHead
+ */
+void PrintUsingRecursionForward(struct Node* p);
+
+/**
+ * Print singly linked list using recursion
+ * @param pHead
+ */
+void PrintUsingRecursionBackward(struct Node* p);

@@ -254,5 +254,37 @@ void ReverseLinkedList(SinglyLinkedList *pHead)
 
     // End of the while loop, The pointer 'prev' store the address of the last node. And the pointer 'pHead' will store the address of the last node
     pHead->next = prev;
+}
 
+
+/**
+ * Print singly linked list using recursion
+ * @param pHead
+ */
+void PrintUsingRecursionForward(struct Node *p)
+{
+    // Exit condition
+    if (p == NULL)
+    {
+        printf("\n");
+        return;
+    }
+    printf("%d ", p->data);
+    // Recursive call
+    PrintUsingRecursionForward(p->next);
+}
+
+
+/**
+ * Print singly linked list using recursion
+ * @param pHead
+ */
+void PrintUsingRecursionBackward(struct Node *p)
+{
+
+    // Exit condition
+    if (p == NULL) return;
+    // Recursive call
+    PrintUsingRecursionBackward(p->next);
+    printf("%d ", p->data);
 }
