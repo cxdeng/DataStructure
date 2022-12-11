@@ -17,3 +17,4 @@ add_executable(LinkedStack Stack/Main/LinkedStackMain.c Stack/Source/LinkedStack
 
 add_executable(StaticSeqQueue Queue/Main/StaticSeqQueueMain.c Queue/Source/StaticSeqQueue.c)
 add_executable(StaticCircularSeqQueue Queue/Main/StaticCircularSeqQueueMain.c Queue/Source/StaticCircularSeqQueue.c)
+add_executable(LinkedQueue Queue/Main/LinkedQueueMain.c Queue/Source/LinkedQueue.c)
