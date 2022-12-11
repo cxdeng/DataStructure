@@ -1,13 +1,12 @@
-#include "StaticSeqQueue.h"
-
+#include "StaticCircularSeqQueue.h"
 
 /**
- * Initialize a static queue
+ * Initialize a static circular queue
  * @return
  */
-StaticSeqQueue *InitStaticArrQueue()
+StaticCircularSeqQueue *InitCircularQueue()
 {
-    StaticSeqQueue *queue = (StaticSeqQueue *) malloc(sizeof(StaticSeqQueue));
+    StaticCircularSeqQueue *queue = (StaticCircularSeqQueue *) malloc(sizeof(StaticCircularSeqQueue));
 
     if (queue)
     {
@@ -28,7 +27,7 @@ StaticSeqQueue *InitStaticArrQueue()
  * @param queue
  * @return
  */
-ElemType Front(StaticSeqQueue *queue)
+ElemType Front(StaticCircularSeqQueue *queue)
 {
     if (queue->front == -1)
     {
@@ -40,11 +39,11 @@ ElemType Front(StaticSeqQueue *queue)
 
 
 /**
- * Judge if the static queue is empty
+ * Judge if the static circular queue is empty
  * @param queue
  * @return
  */
-int IsEmpty(StaticSeqQueue *queue)
+int IsEmpty(StaticCircularSeqQueue *queue)
 {
     if (queue->front == -1 && queue->rear == -1)
         return TRUE;
@@ -53,24 +52,24 @@ int IsEmpty(StaticSeqQueue *queue)
 
 
 /**
- * Judge if the static queue is full
+ * Judge if the static circular queue is full
  * @param queue
  * @return
  */
-int IsFull(StaticSeqQueue *queue)
+int IsFull(StaticCircularSeqQueue *queue)
 {
-    if (queue->rear == MAXSIZE - 1)
+    if ((queue->rear + 1) % MAXSIZE == queue->front)
         return TRUE;
     return FALSE;
 }
 
 
 /**
- * Push a element to the queue
+ * Push a element to the static circular queue
  * @param queue
  * @param elem
  */
-void Enqueue(StaticSeqQueue *queue, ElemType elem)
+void Enqueue(StaticCircularSeqQueue *queue, ElemType elem)
 {
     if (IsFull(queue))
     {
@@ -82,17 +81,18 @@ void Enqueue(StaticSeqQueue *queue, ElemType elem)
         queue->rear = 0;
     } else
     {
-        queue->rear += 1;
+
+        queue->rear = (queue->rear + 1) % MAXSIZE;
     }
     queue->data[queue->rear] = elem;
 }
 
 
 /**
- * Pop a element from the queue
+ * Pop a element from the static circular queue
  * @param queue
  */
-void Dequeue(StaticSeqQueue *queue)
+void Dequeue(StaticCircularSeqQueue *queue)
 {
     if (IsEmpty(queue))
     {
@@ -104,6 +104,7 @@ void Dequeue(StaticSeqQueue *queue)
         queue->rear = -1;
     } else
     {
-        queue->front += 1;
+        queue->front = (queue->front + 1) % MAXSIZE;
     }
 }
+

@@ -15,4 +15,5 @@ add_executable(DoublyLinkedList LinkedList/Main/DoublyLinkedListMain.c LinkedLis
 add_executable(StaticStack Stack/Main/StaticStackMain.c Stack/Source/StaticStack.c)
 add_executable(LinkedStack Stack/Main/LinkedStackMain.c Stack/Source/LinkedStack.c)
 
-add_executable(ArrayQueue Queue/Main/StaticSeqQueueMain.c Queue/Source/StaticSeqQueue.c)
+add_executable(StaticSeqQueue Queue/Main/StaticSeqQueueMain.c Queue/Source/StaticSeqQueue.c)
+add_executable(StaticCircularSeqQueue Queue/Main/StaticCircularSeqQueueMain.c Queue/Source/StaticCircularSeqQueue.c)
