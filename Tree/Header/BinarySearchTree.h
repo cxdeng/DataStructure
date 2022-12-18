@@ -37,3 +37,38 @@ struct BstNode* InsertElem(struct BstNode *root, ElemType elem);
  * @return
  */
 int SearchElem(struct BstNode *root, ElemType elem);
+
+/**
+ * Find the minimum element in the binary search tree using iteration
+ * @param root
+ * @return
+ */
+ElemType FindMinByIteration(struct BstNode *root);
+
+/**
+ * Find the maximum element in the binary search tree using iteration
+ * @param root
+ * @return
+ */
+ElemType FindMaxByIteration(struct BstNode *root);
+
+/**
+ * Find the minimum element in the binary search tree using recursion
+ * @param root
+ * @return
+ */
+ElemType FIndMinRecursion(struct BstNode *root);
+
+/**
+ * Find the maximum element in the binary search tree using recursion
+ * @param root
+ * @return
+ */
+ElemType FIndMaxRecursion(struct BstNode *root);
+
+/**
+ * Get the height of the binary search tree
+ * @param root
+ * @return
+ */
+int FindHeight(struct BstNode *root);
